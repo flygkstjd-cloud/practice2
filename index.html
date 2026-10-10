@@ -126,9 +126,9 @@
                 
                 let formattedReply = reply.replace(/\n/g, '<br>');
                 // 역슬래시(\)가 포함된 안전한 정규표현식
-                formattedReply = formattedReply.replace(/[한국어]/g, '<span class="lang-badge">[한국어]</span>');
-                formattedReply = formattedReply.replace(/[Uzbek]/g, '<br><span class="lang-badge">[Uzbek]</span>');
-                formattedReply = formattedReply.replace(/[Bengali]/g, '<br><span class="lang-badge">[Bengali]</span>');
+formattedReply = formattedReply.replace(/\[한국어\]/g, '<span class="lang-badge">[한국어]</span>');
+formattedReply = formattedReply.replace(/\[Uzbek\]/g, '<br><span class="lang-badge">[Uzbek]</span>');
+formattedReply = formattedReply.replace(/\[Bengali\]/g, '<br><span class="lang-badge">[Bengali]</span>');
 
                 chatBox.innerHTML += `<div class="bot-msg">🧔 레오: <br><br>${formattedReply}</div>`;
                 chatBox.scrollTop = chatBox.scrollHeight;
